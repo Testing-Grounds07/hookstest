@@ -15,3 +15,14 @@
 [data-anim=bookmove] .syllabusObj:after{content:'ADDED';position:absolute;right:2%;top:22%;padding:4px 7px;background:#b78853;color:#fff;font:9px Arial;letter-spacing:1px;transform:rotate(6deg);animation:messagePop .5s .7s both}
 .storyPrompt{cursor:pointer;z-index:25}
 @keyframes focusIn{from{opacity:0}to{opacity:1}}@keyframes wiltStory{0%{transform:scale(1.06) rotate(0)}45%{transform:scale(1.03,.92) rotate(-2deg)}100%{transform:scale(1.06,.86) rotate(1deg);filter:saturate(.62) brightness(.82)}}@keyframes bookToSyllabus{0%{transform:translate(0,0) rotate(0)}45%{transform:translate(35px,-70px) rotate(-7deg) scale(1.12)}100%{transform:translate(90px,95px) rotate(7deg) scale(1.03)}}@keyframes loomStory{0%{transform:scale(1)}65%{transform:scale(1.2,1.34)}100%{transform:scale(1.12,1.25)}}@keyframes messagePop{from{opacity:0;transform:translateY(8px) scale(.9)}to{opacity:1;transform:translateY(0) scale(1)}}@media(prefers-reduced-motion:reduce){.focusMode:after{backdrop-filter:none}[data-anim=bookmove] .morrisonObj.active,[data-anim=wilt] .plantObj.active img,[data-anim=loom] .podiumObj.active img{animation:none!important}}
+/* Generated raster artwork */
+.bg{object-position:center center;filter:saturate(.92) contrast(1.04) brightness(.84)}
+.windowLayer{position:absolute;left:-2%;top:-2%;width:46%;height:104%;object-fit:cover;z-index:1;opacity:.48;mix-blend-mode:screen}
+.rightLayer{position:absolute;right:-4%;top:-2%;width:47%;height:104%;object-fit:cover;z-index:1;opacity:.42;mix-blend-mode:multiply}
+.dustRaster{position:absolute;left:4%;top:0;width:80%;height:78%;object-fit:contain;z-index:4;opacity:.28;mix-blend-mode:screen;animation:dustFloat 10s ease-in-out infinite}
+.leavesRaster{position:absolute;left:29%;bottom:0;width:45%;height:40%;object-fit:contain;z-index:8;opacity:.72;animation:leavesShift 7s ease-in-out infinite}
+.booksObj{left:2%;bottom:3%;width:31%}.morrisonObj{left:24%;bottom:23%;width:15%}.plantObj{left:34%;bottom:0;width:34%}.syllabusObj{left:20%;bottom:-10%;width:27%}.podiumObj{right:1%;bottom:-5%;width:34%}.mugObj{right:0;bottom:0;width:16%}
+.object img{max-height:76vh;object-fit:contain;filter:drop-shadow(0 18px 15px #0008)}
+.plantObj img{filter:drop-shadow(0 20px 18px #0009)}.podiumObj img{filter:drop-shadow(0 22px 20px #000a)}
+@keyframes dustFloat{50%{transform:translate(12px,-8px);opacity:.38}}@keyframes leavesShift{50%{transform:translateX(8px) rotate(.7deg)}}
+@media(max-width:820px){.booksObj{width:35%;left:-3%}.morrisonObj{width:18%;left:22%}.plantObj{width:41%;left:29%}.syllabusObj{width:31%;left:15%}.podiumObj{width:42%;right:-8%}.mugObj{width:20%;right:-2%}.windowLayer{width:52%}.rightLayer{width:54%}}
