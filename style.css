@@ -43,3 +43,7 @@
 [data-anim=message] .mugObj.active{right:18%;bottom:14%;width:16%;transform:rotate(-3deg) scale(1.04)}
 .focusMode:after{background:radial-gradient(circle at 50% 52%,transparent 18%,rgba(5,10,16,.42) 78%);backdrop-filter:blur(.6px)}
 @media(max-width:820px){.booksObj{left:2%;bottom:5%;width:28%}.morrisonObj{left:20%;bottom:23%;width:14%}.plantObj{left:38%;bottom:4%;width:30%}.syllabusObj{left:17%;bottom:-4%;width:25%}.podiumObj{right:3%;bottom:3%;width:29%}.mugObj{right:2%;bottom:5%;width:13%}}
+
+/* Hybrid vector test: raster room + animatable SVG plant */
+.plantObj object{display:block;width:100%;height:auto;aspect-ratio:420/500;overflow:visible;filter:drop-shadow(0 20px 18px #0009)}
+[data-anim=wilt] .plantObj.active object{filter:drop-shadow(0 24px 22px #000b) brightness(1.04)}
