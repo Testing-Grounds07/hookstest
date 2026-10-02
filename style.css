@@ -47,3 +47,11 @@
 /* Hybrid vector test: raster room + animatable SVG plant */
 .plantObj object{display:block;width:100%;height:auto;aspect-ratio:420/500;overflow:visible;filter:drop-shadow(0 20px 18px #0009)}
 [data-anim=wilt] .plantObj.active object{filter:drop-shadow(0 24px 22px #000b) brightness(1.04)}
+
+/* Inline SVG vector experiment v2 */
+.vectorPlant{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 20px 18px #0009)}
+.vp-leaf{transform-box:fill-box;transform-origin:50% 15%;transition:transform 1.15s cubic-bezier(.2,.75,.25,1),fill 1.15s,opacity 1.15s}
+.vp-fall{transform-box:fill-box;transform-origin:center;transition:transform 1.45s ease,opacity 1.1s}
+.plantObj.vector-wilt .l1{transform:rotate(34deg) translateY(12px)}.plantObj.vector-wilt .l2{transform:rotate(-31deg) translateY(15px)}.plantObj.vector-wilt .l3{transform:rotate(27deg) translateY(10px)}.plantObj.vector-wilt .l4{transform:rotate(-26deg) translateY(14px)}.plantObj.vector-wilt .l5{transform:rotate(42deg) translateY(18px)}.plantObj.vector-wilt .l6{transform:rotate(-39deg) translateY(16px)}.plantObj.vector-wilt .l7{transform:rotate(31deg) translateY(14px)}.plantObj.vector-wilt .l8{transform:rotate(-32deg) translateY(17px)}.plantObj.vector-wilt .l9{transform:rotate(22deg) translateY(11px)}.plantObj.vector-wilt .l10{transform:rotate(-24deg) translateY(12px)}
+.plantObj.vector-wilt .vp-leaf{fill:#a86532;opacity:.8}.plantObj.vector-wilt .f1{transform:translate(22px,80px) rotate(110deg);opacity:.25}.plantObj.vector-wilt .f2{transform:translate(-20px,92px) rotate(-120deg);opacity:.2}
+.plantObj .vectorPlant{transition:filter .5s}.plantObj.active .vectorPlant{filter:drop-shadow(0 24px 22px #000b) brightness(1.05)}
