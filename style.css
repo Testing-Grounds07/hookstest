@@ -26,3 +26,20 @@
 .plantObj img{filter:drop-shadow(0 20px 18px #0009)}.podiumObj img{filter:drop-shadow(0 22px 20px #000a)}
 @keyframes dustFloat{50%{transform:translate(12px,-8px);opacity:.38}}@keyframes leavesShift{50%{transform:translateX(8px) rotate(.7deg)}}
 @media(max-width:820px){.booksObj{width:35%;left:-3%}.morrisonObj{width:18%;left:22%}.plantObj{width:41%;left:29%}.syllabusObj{width:31%;left:15%}.podiumObj{width:42%;right:-8%}.mugObj{width:20%;right:-2%}.windowLayer{width:52%}.rightLayer{width:54%}}
+
+/* Spatial grounding: make props belong to the room */
+#stage:before{content:'';position:absolute;left:0;right:0;bottom:0;height:30%;z-index:5;pointer-events:none;background:linear-gradient(to bottom,transparent,rgba(20,13,9,.18) 30%,rgba(20,13,9,.46));}
+.booksObj{left:5%;bottom:6%;width:25%;transform:perspective(700px) rotateY(7deg) rotateZ(-1deg)}
+.morrisonObj{left:21%;bottom:24%;width:12%;transform:perspective(700px) rotateY(-7deg) rotateZ(1deg)}
+.plantObj{left:40%;bottom:4.5%;width:27%;transform:perspective(800px) rotateX(1deg)}
+.syllabusObj{left:20%;bottom:-5%;width:22%;transform:perspective(650px) rotateX(57deg) rotateZ(-7deg);transform-origin:50% 100%}
+.podiumObj{right:6%;bottom:3%;width:25%;transform:perspective(800px) rotateY(-4deg)}
+.mugObj{right:4%;bottom:5%;width:11%;transform:perspective(700px) rotateY(-8deg)}
+.object:before{content:'';position:absolute;left:12%;right:12%;bottom:-2%;height:10%;border-radius:50%;background:rgba(10,7,5,.42);filter:blur(9px);z-index:-1;pointer-events:none}
+.plantObj:before{left:20%;right:20%;height:8%;bottom:0}.podiumObj:before{height:7%;bottom:1%}.mugObj:before{height:9%;filter:blur(5px)}
+/* Keep guided focus dramatic without making props enormous */
+[data-anim=camera] .syllabusObj.active{left:31%;bottom:5%;width:27%;transform:perspective(650px) rotateX(35deg) rotateZ(-3deg) scale(1.05)}
+[data-anim=loom] .podiumObj.active{right:12%;bottom:2%;width:31%;transform:perspective(800px) rotateY(-3deg) scale(1.06);transform-origin:50% 100%}
+[data-anim=message] .mugObj.active{right:18%;bottom:14%;width:16%;transform:rotate(-3deg) scale(1.04)}
+.focusMode:after{background:radial-gradient(circle at 50% 52%,transparent 18%,rgba(5,10,16,.42) 78%);backdrop-filter:blur(.6px)}
+@media(max-width:820px){.booksObj{left:2%;bottom:5%;width:28%}.morrisonObj{left:20%;bottom:23%;width:14%}.plantObj{left:38%;bottom:4%;width:30%}.syllabusObj{left:17%;bottom:-4%;width:25%}.podiumObj{right:3%;bottom:3%;width:29%}.mugObj{right:2%;bottom:5%;width:13%}}
